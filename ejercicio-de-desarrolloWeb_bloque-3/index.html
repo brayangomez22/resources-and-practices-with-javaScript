@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de desarrolo web</title>
+
+    <style>
+        .box{
+            width: 200px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .box input{
+            margin-top: 10px;
+        }
+
+        .box form label{
+            position: relative;
+            top: 10px;
+        }
+
+        .dashed{
+            border: 3px dashed black;
+            position: relative;
+            bottom: 30px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <!--==============================================
+     1. formulario con los campos: nombre, apellido y edda
+     2. boton de enviar el formulario: evento submit
+     3. mostrar los datos por pantalla, al enviar los datos
+     4. validacion del formulario
+    ================================================-->
+
+    <center>
+        <h1>Ejercicio dom, eventos y funciones</h1>
+
+        <div class="box">
+            <form action="" method="POST" id="formulario" onsubmit="return false;">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre"> 
+
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos"> 
+
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad"> 
+
+                <input type="submit" value="Enviar" id="submit">
+            </form>
+        </div>
+
+        <div class="box dashed">
+            <h3 style="padding: 10px;">Informacion del usuario</h3>
+            <hr>
+
+            <p>
+                Nombre: <span id="p_nombre"></span>
+            </p>
+            <p>
+                Apellidos: <span id="p_apellidos"></span>
+            </p>
+            <p>
+                Edad: <span  id="p_edad"></span>
+            </p>
+        </div>
+    </center>
+
+    <script src="main.js"></script>
+</body>
+</html>
